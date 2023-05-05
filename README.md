@@ -18,38 +18,42 @@ Install Python extention for visual studio code
 
 En django_crud_api/settings.py agregamos el nombre de la app 'tasks'
 
-python manage.py migrate (para que inisialice las migrations)
+* python manage.py migrate (para que inisialice las migrations)
 
-python manage.py runserver
+* python manage.py runserver
 
+### Django Rest Framework
 Django rest framwork. https://www.django-rest-framework.org/
-pip install djangorestframework
-pip install django-cors-headers (https://pypi.org/project/django-cors-headers/) => Ver para los detalles de la cof. Middleware
+
+* pip install djangorestframework
+* pip install django-cors-headers (https://pypi.org/project/django-cors-headers/) => Ver para los detalles de la cof. Middleware
+
 Configurar cors-headers al final django_crud_api/settings.py
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173" # Dónde corre FE
 ]
 
-
+### Modelo
 Creamos en models.py el modelo task y ejecutamos
-python manage.py makemigration tasks
-python manage.py migrate tasks (aplicamos en sqlite)
+* python manage.py makemigration tasks
+* python manage.py migrate tasks (aplicamos en sqlite)
 
-python manage.py createsuperuser
-ariel.grillo usr&pass
+* python manage.py createsuperuser (Colocar usr & pass)
 
 ## Documentación de la API
-pip install coreapi
-https://www.django-rest-framework.org/coreapi/
+* pip install coreapi
+Doc: https://www.django-rest-framework.org/coreapi/
 
 ## FRONTEND React
 ViteJs: https://vitejs.dev/
-npm create vite (seguimos los pasos)
+* npm create vite (seguimos los pasos)
 
-npm i react-router-dom react-hot-toast axios react-hook-form
+* npm i react-router-dom react-hot-toast axios react-hook-form
 
 #tailwindcss
 https://tailwindcss.com/docs/guides/vite
 
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+* npm install -D tailwindcss postcss autoprefixer
+* npx tailwindcss init -p
+
+Consultar la doc de tailwincss para aplicar los pasos necesarios de la instalación.
