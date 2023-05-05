@@ -1,10 +1,10 @@
 # TasksAdmin
 A simple tasks manager
 
-BAsed on the following Tutorial
+Based on the following Tutorial
 https://www.youtube.com/watch?v=38XWpyEK8IY
 
-#BACKEND
+## BACKEND
 pip install virtualenv
 python -m venv  venv
 
@@ -37,11 +37,11 @@ python manage.py migrate tasks (aplicamos en sqlite)
 python manage.py createsuperuser
 ariel.grillo usr&pass
 
-#Documentación de la API
+## Documentación de la API
 pip install coreapi
 https://www.django-rest-framework.org/coreapi/
 
-#FRONTEND React
+## FRONTEND React
 ViteJs: https://vitejs.dev/
 npm create vite (seguimos los pasos)
 
@@ -52,5 +52,3 @@ https://tailwindcss.com/docs/guides/vite
 
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
-
-
