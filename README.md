@@ -5,15 +5,16 @@ Based on the following Tutorial
 https://www.youtube.com/watch?v=38XWpyEK8IY
 
 ## BACKEND
-pip install virtualenv
-python -m venv  venv
+* pip install virtualenv
+* python -m venv  venv
 
 Install Python extention for visual studio code
-F1, python: select interprete (Seleccionar el de la estrellita, digamos el local)
+* F1, python: select interprete (Seleccionar el de la estrellita, digamos el local)
 
-pip install django
-django-admin startproject django_crud_api . (el punto es para que no cree una carpeta)
-python manage.py startapp tasks
+### Django 
+* pip install django
+* django-admin startproject django_crud_api . (el punto es para que no cree una carpeta)
+* python manage.py startapp tasks
 
 En django_crud_api/settings.py agregamos el nombre de la app 'tasks'
 
