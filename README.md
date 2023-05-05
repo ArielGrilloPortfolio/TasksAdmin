@@ -21,8 +21,11 @@ En django_crud_api/settings.py agregamos el nombre de la app 'tasks'
 * python manage.py migrate (para que inisialice las migrations)
 
 * python manage.py runserver
-### Requirements.txt
-Dendencias del proyecto
+
+### Deployment
+* pip install gunicorn
+
+Dendencias del proyecto en Requirements.txt
 * pip freeze > requirements.txt (Crear las dependencias)
 * pip install -r .\requirements.txt (Instalar las dependencias)
 
