@@ -22,12 +22,30 @@ En django_crud_api/settings.py agregamos el nombre de la app 'tasks'
 
 * python manage.py runserver
 
-### Deployment
+# Deployment
+## Run server  en producción Django
 * pip install gunicorn
 
-Dendencias del proyecto en Requirements.txt
+## whitenoise
+* pip install whitenoise
+Config: https://whitenoise.readthedocs.io/en/latest/
+Ver la config para añadir el middleware y la config para cache
+
+## Dendencias del proyecto en Requirements.txt
 * pip freeze > requirements.txt (Crear las dependencias)
 * pip install -r .\requirements.txt (Instalar las dependencias)
+
+## STATIC_ROOT setting
+Añadir en settings.py justo debajo de STATIC_URL
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+Debo colocar al principio import os
+* python manage.py collectstatic
+
+## Procfile
+web: python manage.py collectstatic && gunicorn django_crud_api.wsgi
+
+## runtime.txt
+crear el archivo y pegar el resultado de python --version
 
 ### Django Rest Framework
 Django rest framwork. https://www.django-rest-framework.org/
