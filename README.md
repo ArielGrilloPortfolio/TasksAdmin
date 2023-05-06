@@ -22,7 +22,7 @@ En django_crud_api/settings.py agregamos el nombre de la app 'tasks'
 
 * python manage.py runserver
 
-# Deployment
+# Backend Deployment
 ## Run server  en producción Django
 * pip install gunicorn
 
@@ -63,6 +63,16 @@ crear el archivo y pegar el resultado de python --version
 Doc: https://docs.railway.app/develop/cli
 * iex "& {$(irm get.scoop.sh)} -RunAsAdmin" #install scoop for admin
 * scoop install railway
+
+# Frontend Deployment
+## Static files dir incluiding dist
+* npm run build # Crear el build en /dist
+Edit setting.py para agergar. La idea es incluir el /dist en las staticfiles
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'client','dist')
+]
+
 
 ### Django Rest Framework
 Django rest framwork. https://www.django-rest-framework.org/

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gh_gtjf*+*jb+(!g%swq5^d+1s(!l9-2yis#nrxn2mm_b0i3l_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','tasksadmin-production.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','tasksadmin-production.up.railway.app']
 
 
 # Application definition
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'django_crud_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'client', 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,7 +83,9 @@ WSGI_APPLICATION = 'django_crud_api.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(default="sqlite://db.sqlite3")
+     "default":
+    dj_database_url.config(default="sqlite:///" +
+                           os.path.join(BASE_DIR, "db.sqlite3"))
 }
 
 
@@ -123,6 +125,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'client','dist')
+]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
