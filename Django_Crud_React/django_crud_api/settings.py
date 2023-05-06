@@ -138,3 +138,5 @@ REST_FRAMEWORK = {
 }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+CSRF_TRUSTED_ORIGINS =["http://*","https://tasksadmin-production.up.railway.app"]
