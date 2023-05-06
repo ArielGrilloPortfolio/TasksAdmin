@@ -31,9 +31,21 @@ En django_crud_api/settings.py agregamos el nombre de la app 'tasks'
 Config: https://whitenoise.readthedocs.io/en/latest/
 Ver la config para añadir el middleware y la config para cache
 
+## DJ Database
+pip install dj-database-url # Select database for dev and prod environment
+
+## Pscopg2
+* pip install psycopg2 # En prod usamos postgresql
+
 ## Dendencias del proyecto en Requirements.txt
-* pip freeze > requirements.txt (Crear las dependencias)
+* pip freeze > requirements.txt # Crear las dependencias
 * pip install -r .\requirements.txt (Instalar las dependencias)
+
+## Settings database
+DATABASES = {
+    "default": dj_database_url.config(default="sqlite://db.sqlite3")
+}
+
 
 ## STATIC_ROOT setting
 Añadir en settings.py justo debajo de STATIC_URL
@@ -46,6 +58,11 @@ web: python manage.py collectstatic && gunicorn django_crud_api.wsgi
 
 ## runtime.txt
 crear el archivo y pegar el resultado de python --version
+
+## Railways CLI
+Doc: https://docs.railway.app/develop/cli
+* iex "& {$(irm get.scoop.sh)} -RunAsAdmin" #install scoop for admin
+* scoop install railway
 
 ### Django Rest Framework
 Django rest framwork. https://www.django-rest-framework.org/
