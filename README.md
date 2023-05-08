@@ -4,6 +4,10 @@ A simple tasks manager
 Based on the following Tutorial
 https://www.youtube.com/watch?v=38XWpyEK8IY
 
+Depoloyed in Railways.app
+https://tasksadmin-production.up.railway.app/tasks
+
+
 ## BACKEND
 * pip install virtualenv
 * python -m venv  venv
